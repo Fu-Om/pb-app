@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      pocketbase:
+        specifier: ^0.21.3
+        version: 0.21.3
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -1102,6 +1105,9 @@ packages:
 
   picocolors@1.0.1:
     resolution: {integrity: sha512-anP1Z8qwhkbmu7MFP5iTt+wQKXgwzf7zTyGlcdzabySa9vd0Xt392U0rVmz9poOaBj0uHJKyyo9/upk0HrEQew==}
+
+  pocketbase@0.21.3:
+    resolution: {integrity: sha512-bsQRZ1mj4dhPJ4P5iSrDqWQtBX2NtuBkf6IOZwTv27zZOw6zrISgo963i5JD/99qKKD5aMSMDPGk1BE9ZyI7Cg==}
 
   possible-typed-array-names@1.0.0:
     resolution: {integrity: sha512-d7Uw+eZoloe0EHDIYoe+bQ5WXnGMOpmiZFTuMWCwpjzzkL2nTjcKiAk4hh8TjnGye2TwWOk3UXucZ+3rbmBa8Q==}
@@ -2523,6 +2529,8 @@ snapshots:
   path-parse@1.0.7: {}
 
   picocolors@1.0.1: {}
+
+  pocketbase@0.21.3: {}
 
   possible-typed-array-names@1.0.0: {}
 
