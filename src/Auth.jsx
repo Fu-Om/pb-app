@@ -1,14 +1,15 @@
 import pb from "./lib/pocketbase";
 import { useForm } from "react-hook-form";
-import useLogout from "./hooks/useLogout";
 import useLogin from "./hooks/useLogin";
+import useLogout from "./hooks/useLogout";
 
 const Auth = () => {
+  const { mutate: login, isLoading, isError } = useLogin();
   const logout = useLogout();
-  const { login, isLoading } = useLogin();
   const { register, handleSubmit, reset } = useForm();
   const isLoggedIn = pb.authStore.isValid;
   const onSubmit = async (data) => {
+    console.log(data.email);
     login({ email: data.email, password: data.password });
     reset();
   };
@@ -24,7 +25,7 @@ const Auth = () => {
     return (
       <>
         {isLoading && <h1>Loading...</h1>}
-        {/*{isError && <h1>Invalid email or password</h1>}*/}
+        {isError && <h1>Invalid email or password</h1>}
         <h1>Please Log In</h1>
         <form onSubmit={handleSubmit(onSubmit)}>
           <input type="text" placeholder="email" {...register("email")} />
