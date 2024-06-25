@@ -1,9 +1,12 @@
-import React from 'react'
+import Auth from "./Auth";
+
 
 const App = () => {
   return (
-    <div>App</div>
-  )
-}
+      <div>
+        <Auth />
+      </div>
+  );
+};
 
-export default App
+export default App;
