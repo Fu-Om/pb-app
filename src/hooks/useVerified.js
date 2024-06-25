@@ -16,8 +16,8 @@ const useVerified = () => {
 
   const requestVerification = async () => {
     const email = pb.authStore.model.email;
-    const res = await pb.collection('users').requestVerification(email);
-    if (res) alert('Verification email sent');
+    const res = await pb.collection("users").requestVerification(email);
+    if (res) alert("Verification email sent");
   };
   return { isVerified, requestVerification };
 };
